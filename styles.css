@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 :root {
     --branco-principal: #FFFFFF;
     --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
+
+    --font-family: 'Inter', sans-serif;
+    --font-weight-padrao: 400;
+    --font-weight-title: 700;
+    --font-size-padrao: 16px;
+    --font-size-aviso: 12px;
+    --font-size-title: 28px;
 }
 
 * {
@@ -12,10 +21,13 @@
 
 body {
     background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-padrao);
+    font-size: var(--font-size-padrao);
 }
 
 .principal {
-    color: var(--branco-principal);
     background-image: url("images/Background.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -23,4 +35,34 @@ body {
 
 .container {
     height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+}
+
+.container__title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-title);
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    text-decoration: none;
+    color: var(--branco-principal);
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+}
+
+.container__botao_secundario {
+    background-color: transparent;
+    text-decoration: none;
+    border: 2px solid var(--branco-principal);
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+}
+
+.container__aviso {
+    font-size: var(--font-size-aviso);
+    color: var(--cinza-secundario);
 }
